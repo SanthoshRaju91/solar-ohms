@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from './components/headers/Header';
 
 export default class App extends Component {
   constructor(props) {
@@ -8,11 +9,15 @@ export default class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <button className="btn btn-primary">Button</button>
-        </div>
-      </BrowserRouter>
+      <div>
+        {/* <div className="preloader">
+          <div className="preloader_image" />
+        </div> */}
+
+        <BrowserRouter>
+          <Header></Header>          
+        </BrowserRouter>
+      </div>
     );
   }
 }

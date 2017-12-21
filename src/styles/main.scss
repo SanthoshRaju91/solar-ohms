@@ -2,3 +2,9 @@
 @import '../vendor/css/bootstrap.min.css';
 @import '../vendor/css/fonts.css';
 @import '../vendor/css/main.css';
+
+.slides {
+    .container {
+        top: 5em;
+    }
+}

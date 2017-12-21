@@ -1,7 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ENV = process.env.NODE_ENV || 'development';
 
 const extractSass = new ExtractTextPlugin({
@@ -72,7 +72,15 @@ var config = {
                   inject: 'body',
                   title: 'Solar Ohms'
             }),
-            extractSass
+            extractSass,
+
+            new CopyWebpackPlugin([{
+                  from: './src/vendor/js/',
+                  to: './vendor/js/'
+            }, {
+                  from: './src/vendor/images/',
+                  to: './vendor/images'
+            }])
       ]
 };
 

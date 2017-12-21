@@ -8,7 +8,7 @@ const Logo = styled.div`
 `;
 
 const HeaderStyled = styled.header`  
-  background-color: #333333 !important;
+  background-color: transparent !important;
   height: 65px !important;
 `;
 
@@ -17,10 +17,6 @@ const Link = styled.a`
       color: #fff !important;
       letter-spacing: 1.5px !important;
       font-weight: 300 !important;
-
-      &:hover {
-        border-color: #fff !important;
-      }
 `;
 
 

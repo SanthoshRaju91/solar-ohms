@@ -49,6 +49,24 @@ export default class Header extends Component {
     })
   };
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = (event) => {
+        let scrollPos = $(document).scrollTop();
+
+        if(scrollPos > 500) {
+          $('body').addClass('scrolled-to');
+        } else {
+          $('body').removeClass('scrolled-to');
+        }
+  }
+
   render() {
     const { headers } = this.state;
 

@@ -30,7 +30,6 @@ export default class App extends Component {
                 <Switch>
                   <Route exact path="/" component={Landing}></Route>
                   <Route path="/products" render={() => {
-                    this.setState({isProduct: true});
                     return (
                       <Products></Products>
                     )

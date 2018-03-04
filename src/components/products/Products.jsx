@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel';
+import { Link } from 'react-router-dom';
 
 import config from './config';
 
@@ -15,7 +16,7 @@ const Products = props => {
 							<p>
 								Nulla sed ligula ut ipsum elementum gravida. Pellentesque nec imperdiet felis. Fusce sodales quam eget lorem volutpat, ornare luctus est dictum. Nam varius pretium condimentum. Duis consequat, lectus ac aliquam elementum, purus odio.
 							</p>
-							<a href="gallery-fullwidth-4-cols.html" className="theme_button color1 border_button topmargin_25 bottommargin_0">See All Projects</a>
+							<Link to="products" className="theme_button color1 border_button topmargin_25 bottommargin_0">Check All Products</Link>
 
                             <Carousel carousels={config.carousels}></Carousel>
 						</div>
